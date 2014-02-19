@@ -24,6 +24,8 @@ function merge_theme(){
 
 				$new_content = generateNewContent($source_path, $file_info['content'], $file_info['insert_method'], $tag);			
 
+				createDirStructure($paths['custom_path']);
+
 				file_put_contents($paths['custom_path'], $new_content);
 		
 				if($console_messages) echo ":)\n";
@@ -118,6 +120,37 @@ function generateNewContent($source_path, $content, $insert_method, $tag){
 	}
 
 	return $output;
+
+}
+
+function createDirStructure($path){
+	
+	$current_path = "";
+
+	$dir_array = getDirArray($path);
+
+	foreach($dir_array as $dir){
+
+		$current_path .= $dir . "/";
+
+		if(!is_dir($current_path)){
+
+			mkdir($current_path);
+
+		}
+
+	}
+
+	return true;
+
+}
+
+function getDirArray($path){
+
+	$return_array = explode('/', $path);
+	array_pop($return_array);
+
+	return $return_array;
 
 }
 
