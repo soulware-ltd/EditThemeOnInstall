@@ -19,11 +19,11 @@ class mergeTheme {
     protected $log_messages = "screen";
 
     //array of Soulware/themeMergeConfig objects
-    protected $configs;
+    protected $config;
 
     public function __construct(array $merge_configs) {
-        
-        $this->configs = $merge_configs;
+        $this->log("init mergeTheme class");
+        $this->config = $merge_configs;
         
     }
     
@@ -49,7 +49,7 @@ class mergeTheme {
 
                     $this->createDirStructure($paths['custom_path']);
 
-                    $this->file_put_contents($paths['custom_path'], $new_content);
+                    file_put_contents($paths['custom_path'], $new_content);
 
                     $this->log("well, this is goodbye :)");
                 }
