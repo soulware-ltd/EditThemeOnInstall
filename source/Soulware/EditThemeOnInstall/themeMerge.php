@@ -11,7 +11,7 @@
 
 namespace Soulware\EditThemeOnInstall;
 
-require_once(__DIR__ . '/theme_merge.config.php');
+//require_once(__DIR__ . '/theme_merge.config.php');
 
 class mergeTheme {
 
