@@ -13,7 +13,7 @@ namespace Soulware\EditThemeOnInstall;
 
 //require_once(__DIR__ . '/theme_merge.config.php');
 
-class mergeTheme {
+class themeMerge {
 
     //screen | console | false
     protected $log_messages = "screen";
