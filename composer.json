@@ -1,0 +1,14 @@
+{
+    "name": "soulware/edit-theme-on-install",
+    "description": "SugarCRM install and uninstall script to modify or extend Metadata with custom code.",
+    "version": "0.9.0",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": {
+          "Soulware\\EditThemeOnInstall\\": "source/"
+          }        
+    }
+}
